@@ -1,10 +1,8 @@
-# imports
 from selenium import webdriver
 from selenium.webdriver.support import wait, expected_conditions
 from selenium.webdriver.common.by import By
 import sys
 
-# globals
 __author__ = 'Omri Shayo'
 _router_address = r''
 _user_name = ''
@@ -19,8 +17,8 @@ def main():
     init_driver()
     login_into_router()
 
-    # go to wireless tab
-    _driver.get(r'http://x.x.x.x/wlanBasicSecurity.asp')
+    wireless_tab = r'http://x.x.x.x/wlanBasicSecurity.asp'
+    _driver.get(wireless_tab)
 
     toggle_wireless()
     _driver.find_element_by_css_selector(_apply_button_selector).click()
